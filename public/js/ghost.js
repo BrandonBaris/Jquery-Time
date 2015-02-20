@@ -5,7 +5,7 @@ window.onload = function() {
 }
 function ghost_chat(msg){
   document.getElementById("ghost_talk").innerHTML =  msg;
-  $( "#ghost_talk" ).show("slow").fadeOut( 7000 );
+  $( "#ghost_talk" ).show("slow").fadeOut( 6000 );
 }
 
 $( ".show_it" ).click(function() {
