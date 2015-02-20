@@ -87,9 +87,7 @@ ul {
 .hideme {
 	visibility: none;
 }
-button {
 
-}
 code {
 	margin: 1rem 0;
 	&.hljs {
@@ -114,6 +112,12 @@ p{
 	position: fixed;
 	bottom: 0;
 	margin: auto;
+	button {
+		background-color: rgba(121,194,121,.6);
+	&:hover {
+		background-color: rgba(121,194,121,.2);
+	}
+	}
 }
 #ghost_dude {
 	background-image: url("../images/ghost.svg");
@@ -130,6 +134,7 @@ p{
 
 #ghost_talk {
 	display: none;
+	width: 66%;
 	color: #555;
 	font-size: 1.5rem;
 	font-weight: 700;
@@ -137,7 +142,7 @@ p{
 	padding: 2rem;
 	border: thick solid rgba(0,0,0,0.3);
 	border-radius: 20rem;
-	top: 35%;
-	left: 40%;
+	top: 20%;
+	left: 20%;
 	background-color: rgba(255,255,255,0.8);
 }
