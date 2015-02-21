@@ -128,9 +128,6 @@ ul {
       ul li button:nth-child(3):hover {
         background-color: rgba(19, 59, 12, 0.5); }
 
-.hideme {
-  visibility: none; }
-
 code {
   margin: 1rem 0; }
   code.hljs {
@@ -153,6 +150,9 @@ p {
   margin: auto; }
   .button_col button {
     background-color: rgba(121, 194, 121, 0.6); }
+    .button_col button:last-child {
+      background-color: #333;
+      font-weight: 700; }
     .button_col button:hover {
       background-color: rgba(121, 194, 121, 0.2); }
 
@@ -169,7 +169,7 @@ p {
 
 #ghost_talk {
   display: none;
-  width: 66%;
+  width: 50%;
   color: #555;
   font-size: 1.5rem;
   font-weight: 700;

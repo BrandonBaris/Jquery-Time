@@ -5,7 +5,7 @@ window.onload = function() {
 }
 function ghost_chat(msg){
   document.getElementById("ghost_talk").innerHTML =  msg;
-  $( "#ghost_talk" ).show("slow").fadeOut( 6000 );
+  $( "#ghost_talk" ).show("slow").delay( 5000).fadeOut( 1000 );
 }
 
 $( ".show_it" ).click(function() {
@@ -53,7 +53,7 @@ $( ".fade_high" ).click(function() {
 
 $( ".slide_down" ).click(function() {
   $( "#ghost_dude" ).slideDown( "slow" );
-  ghost_chat("Time to do the JS Booooogaloo! Get it?!");
+  ghost_chat("EY BAE BOO");
 });
 
 $( ".slide_up" ).click(function() {
@@ -63,12 +63,11 @@ $( ".slide_up" ).click(function() {
 
 $( ".slide_toggle" ).click(function() {
   $( "#ghost_dude" ).slideToggle( "slow" );
-  ghost_chat("EY BAE BOO");
+  ghost_chat("Time to do the JS Booooogaloo slide! Get it?!");
 });
 
 $( "li button:nth-child(3)" ).click(function() {
   $( this ).next().slideToggle( 1000 ); 
-  // $( "pre button" ).toggleClass( "hideme" );
 });
 
 $( "#tog_para" ).click(function() {
@@ -100,5 +99,9 @@ $( ".back_2_code" ).click(function() {
   $( "#ghost_dude" ).fadeOut( 1000)
   ghost_chat("I see how it is.");
 });
+
+$( "#ghost_talk" ).click(function() {
+  $( "#ghost_talk" ).hide( "fast" );
+})
 
 }); // end closure

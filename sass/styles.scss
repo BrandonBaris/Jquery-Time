@@ -84,9 +84,9 @@ ul {
 .showme {
 // display: none;}
 }
-.hideme {
-	visibility: none;
-}
+// .hideme {
+// 	visibility: none;
+// }
 
 code {
 	margin: 1rem 0;
@@ -114,9 +114,14 @@ p{
 	margin: auto;
 	button {
 		background-color: rgba(121,194,121,.6);
-	&:hover {
-		background-color: rgba(121,194,121,.2);
-	}
+
+		&:last-child {
+			background-color: #333;
+			font-weight: 700;
+		}
+		&:hover {
+			background-color: rgba(121,194,121,.2);
+		}
 	}
 }
 #ghost_dude {
@@ -134,7 +139,7 @@ p{
 
 #ghost_talk {
 	display: none;
-	width: 66%;
+	width: 50%;
 	color: #555;
 	font-size: 1.5rem;
 	font-weight: 700;
