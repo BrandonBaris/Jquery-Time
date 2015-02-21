@@ -19,7 +19,7 @@ header {
 	height: 40px;
 	div#top_buttons {
 		position: fixed;
-		margin: 0 3rem;
+		// margin: 0 3rem;
 		// background-color: #fff;
 	}
 }
@@ -38,7 +38,7 @@ button {
 	letter-spacing: 1px;
 	padding: 0.3rem;
 	font-size: .7rem;
-	width: 14rem;
+	width: 12rem;
 	margin: .3rem 0;
 	&:hover {
 		background-color: rgba(22,75,153,0.2);
@@ -81,13 +81,6 @@ ul {
 	}
 }
 
-.showme {
-// display: none;}
-}
-// .hideme {
-// 	visibility: none;
-// }
-
 code {
 	margin: 1rem 0;
 	&.hljs {
@@ -104,6 +97,7 @@ p{
 	padding: 1rem;
 	background-color: rgba(0,0,0,0.3);
 	display: block;
+	border-radius: 0.2rem;
 }
 
 .button_col { 
@@ -113,14 +107,14 @@ p{
 	bottom: 0;
 	margin: auto;
 	button {
-		background-color: rgba(121,194,121,.6);
+		background-color: rgba(121,194,121,0.6);
 
 		&:last-child {
 			background-color: #333;
 			font-weight: 700;
 		}
 		&:hover {
-			background-color: rgba(121,194,121,.2);
+			background-color: rgba(121,194,121,0.2);
 		}
 	}
 }
@@ -128,19 +122,20 @@ p{
 	background-image: url("../images/ghost.svg");
 	// display: none;
 	background-repeat: no-repeat;
-  background-position: top; 
+  	background-position: top; 
 	height: 500px;
 	width: 100%;
 	position: fixed;
-  top: 100px;
-  right: -200px;
-  z-index: -1;
+  	top: 100px;
+  	right: -200px;
+  	z-index: -1;
 }
 
 #ghost_talk {
 	display: none;
 	width: 50%;
 	color: #555;
+	font-family: "Comic Sans MS",sans-serif;
 	font-size: 1.5rem;
 	font-weight: 700;
 	position: fixed;

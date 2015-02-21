@@ -79,8 +79,7 @@ header {
   max-width: 1000px;
   height: 40px; }
   header div#top_buttons {
-    position: fixed;
-    margin: 0 3rem; }
+    position: fixed; }
 
 .main_content {
   margin: auto;
@@ -95,7 +94,7 @@ button {
   letter-spacing: 1px;
   padding: 0.3rem;
   font-size: .7rem;
-  width: 14rem;
+  width: 12rem;
   margin: .3rem 0; }
   button:hover {
     background-color: rgba(22, 75, 153, 0.2); }
@@ -140,7 +139,8 @@ p {
   margin: 1rem;
   padding: 1rem;
   background-color: rgba(0, 0, 0, 0.3);
-  display: block; }
+  display: block;
+  border-radius: 0.2rem; }
 
 .button_col {
   display: none;
@@ -171,6 +171,7 @@ p {
   display: none;
   width: 50%;
   color: #555;
+  font-family: "Comic Sans MS",sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
   position: fixed;
