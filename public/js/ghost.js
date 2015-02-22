@@ -1,4 +1,5 @@
 $(function(){
+
 var ghost_can_talk = true;
 var randomTime = Math.floor((Math.random()*10000)+3000);
 window.onload = function() {
