@@ -1,29 +1,29 @@
 $(function(){
 var ghost_can_talk = true;
-var randomTime = Math.floor((Math.random()*6000)+3000);
+var randomTime = Math.floor((Math.random()*10000)+3000);
 window.onload = function() {
-  ghost_chat("Ooooo very spooky.")
-}
+  ghost_chat("Ooooo very spooky.");
+};
 
 $( "#stfu_ghost" ).click(function() {
   if (ghost_can_talk === true){
     $( "#ghost_talk" ).hide("fast");
     document.getElementById("stfu_ghost").innerHTML = "Talk to me!";
-    return ghost_can_talk = false;
+    ghost_can_talk = false;
+    return false;
   } 
   if (ghost_can_talk === false){
     document.getElementById("stfu_ghost").innerHTML = "Be Quiet";
-    return ghost_can_talk = true;    
+    ghost_can_talk = true;
+    return true;    
   }
 });
 
 function ghost_chat(msg){
   if (ghost_can_talk === true){
     var randomer = Math.floor(Math.random()*ghostscript.length);
-    // setTimeout( function() {
       document.getElementById("ghost_talk").innerHTML =  ghostscript[randomer];
       $( "#ghost_talk" ).show("slow").delay( 3000 ).fadeOut(2000);
-    // },4000);
   }
 }
 
