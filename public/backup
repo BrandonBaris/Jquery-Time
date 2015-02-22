@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="css/styles.css">
+	<title>Jquery Story</title>
+
+</head>
+<body>
+<div class="button_col">
+	<div class="ghost_talk">Ghost Control</div>
+	<div class="ghost_dude">Ooooooo</div>
+	<button class="showit">Show it</button>
+	<button class="hideit">Hide it</button>
+	<button class="toggleit">Toggle it</button>
+	<button class="fadein">Fade in</button>
+	<button class="fadeout">Fade out</button>
+	<button class="fadelow">Fade to low</button>
+	<button class="fadehigh">Fade to high</button>
+	<button class="fadetoggle">Fade toggle</button>
+	<button class="slidedown">Slide down</button>
+	<button class="slideup">Slide up</button>
+	<button class="slidetoggle">Slide toggle</button>
+
+</div>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="js/story.js"></script>
+</body>
+</html>

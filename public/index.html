@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/hybrid.min.css">
+<script src="js/highlight.min.js"></script>
+	<title>Jquery Basic, Fade, Slide Effects</title>
+
+</head>
+<body>
+
+<div id="ghost_dude"></div>
+<div id="ghost_talk">AHAHA</div>
+<header>
+	<div id="top_buttons">
+	<button id="tog_para">Toggle Paragraphs</button>
+	<button id="open_all">Open All Code Blocks</button>
+	<button id="close_all">Close All Code Blocks</button>
+	<button id="hide_noneffects">Just Me and Ghost Bro</button>
+	<button id="stfu_ghost">STFU GHOST</button>
+	</div>
+</header>
+<div class="main_content">
+
+<p>Jquery is a cross-platform javascript library that is designed to simplify many scripting processes on the front end/client side.</p>
+
+<p>Hi, I'm a ghost and I'll tell you about a few of the style effects in Jquery that allows you to show, hide, and toggle items in various ways.</p>
+
+<!-- BASIC EFFECTS -->
+<p>The first 3 methods are basic functions that do their job quickly transistioning from the side.
+<!-- .show -->
+<ul>
+	<li>
+		<span class="effect_list">.show() - This displays an element if it is hidden.</span>
+			<button class="show_it">Show it</button><button>Toggle Code</button>
+	<pre><code>
+	$( ".show_it" ).click(function() {
+	  $( "#ghost_dude" ).show( "slow" ); 
+	  // animation runs slow(600ms)
+	});	
+	</code></pre></li>
+<!-- .hide -->
+	<li>
+		<span class="effect_list">.hide() - Hides an element.</span>
+			<button class="hide_it">Hide it</button><button>Toggle Code</button>
+	<pre><code>
+	$( ".hide_it" ).click(function() {
+	  $( "#ghost_dude" ).hide( "fast" ); 
+	  // animation runs fast(200ms)
+	});	
+	</code></pre></li>
+<!-- .toggle -->
+	<li>
+		<span class="effect_list">.toggle() - Toggles between hidden and displayed</span>
+			<button class="toggle_it">Toggle it</button><button>Toggle Code</button>
+<pre><code>
+	$( ".toggle_it" ).click(function() {
+	  $( "#ghost_dude" ).toggle( 3000 ); 
+	  // completes in a very slow 3 secs (3000ms)
+	});	
+</code></pre></li>
+</ul>
+<!-- FADE EFFECTS -->
+<p> Now to be spooky like a ghost! The next methods are like the first 3, but with now an added effect of fading in.</p>
+
+<!-- .fadeIn -->
+<ul>
+	<li>
+		<span class="effect_list">.fadeIn() - Fades the elements in.</span>
+			<button class="fade_in">Fade it in</button><button>Toggle Code</button>
+<pre><code>
+	$( ".fade_in" ).click(function() {
+	  $( "#ghost_dude" ).fadeIn( 1000 );
+	});
+</code></pre></li>
+<!-- .fadeOut -->
+	<li>
+		<span class="effect_list">.fadeOut() - Fades the elements out.</span>
+			<button class="fade_out">Fade it out</button><button>Toggle Code</button>
+<pre><code>
+	$( ".fade_out" ).click(function() {
+	  $( "#ghost_dude" ).fadeOut( "slow" );
+	});
+</code></pre></li>
+<!-- .fadeToggle-->
+	<li>
+		<span class="effect_list">.fadeToggle() - Toggles elements with a fade effect.</span>
+			<button class="fade_toggle">Fade toggle it</button><button>Toggle Code</button>
+<pre><code>
+	$( ".fade_toggle" ).click(function() {
+	  $( "#ghost_dude" ).fadeToggle( "slow" );
+	});
+</code></pre></li>
+<!-- .fadeTo 25% -->
+	<li>
+		<span class="effect_list">.fadeTo() - Fades element to a specified opacity.</span>
+			<button class="fade_low">Fade to 25%</button><button>Toggle Code</button>
+<pre><code>
+	$( ".fade_low" ).click(function() {
+	  $( "#ghost_dude" ).fadeTo( "slow" , 0.25);
+	});
+</code></pre></li>
+<!-- .fadeTo 100% -->
+	<li>
+		<span class="effect_list">.fadeTo() - This example returns it to normal opacity.</span>
+			<button class="fade_high">Fade to 100%</button><button>Toggle Code</button>
+<pre><code>
+	$( ".fade_high" ).click(function() {
+	  $( "#ghost_dude" ).fadeTo( "slow" , 1);
+	});
+</code></pre></li>
+</ul>
+
+<!-- SLIDE EFFECTS -->
+<p> These methods apply a sliding effect.</p>
+
+<!-- .slideDown -->
+<ul>
+	<li>
+		<span class="effect_list">.slideDown() - Shows the element with a slide effect.</span>
+			<button class="slide_down">Slide down</button><button>Toggle Code</button>
+<pre><code>
+	$( ".slide_down" ).click(function() {
+	  $( "#ghost_dude" ).slideDown( "slow" );
+	});
+</code></pre></li>
+<!-- .slideUp -->
+	<li>
+		<span class="effect_list">.slideUp() - Hides the element with a slide effect.</span>
+			<button class="slide_up">Slide up</button><button>Toggle Code</button>
+<pre><code>
+	$( ".slide_up" ).click(function() {
+	  $( "#ghost_dude" ).slideUp( "slow" );
+	});
+</code></pre></li>
+<!-- .slideToggle -->
+	<li>
+		<span class="effect_list">.slideToggle() - Toggles the element with a slide effect.</span>
+			<button class="slide_toggle">Slide toggle</button><button>Toggle Code</button>
+<pre><code>
+	$( ".slide_toggle" ).click(function() {
+	  $( "#ghost_dude" ).slideToggle( "slow" );
+	});
+</code></pre>
+</ul>
+
+<p>Now you can easily add some style to your webpage with JQuery.</p>
+<div class="button_col">
+	<button class="show_it">Show it</button>
+	<button class="hide_it">Hide it</button>
+	<button class="toggle_it">Toggle it</button>
+	<button class="fade_in">Fade in</button>
+	<button class="fade_out">Fade out</button>
+	<button class="fade_low">Fade to low</button>
+	<button class="fade_high">Fade to high</button>
+	<button class="fade_toggle">Fade toggle</button>
+	<button class="slide_down">Slide down</button>
+	<button class="slide_up">Slide up</button>
+	<button class="slide_toggle">Slide toggle</button>
+	<button class="back_2_code">BACK TO CODE</button>
+</div>
+
+</div> <!-- main content -->
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="js/ghost.js"></script>
+<script src="js/ghostscript.js"></script>
+</body>
+</html>
