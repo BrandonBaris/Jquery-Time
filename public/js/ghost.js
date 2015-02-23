@@ -1,6 +1,6 @@
 $(function(){
 var ghost_can_talk = true;
-var randomTime = Math.floor((Math.random()*10000)+3000);
+var randomTime = Math.floor((Math.random()*12000)+4000);
 window.onload = function() {
   ghost_chat("Ooooo very spooky.");
 };
