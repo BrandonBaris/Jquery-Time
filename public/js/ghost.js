@@ -1,7 +1,8 @@
 $(function(){
 
 var ghost_can_talk = true;
-var randomTime = Math.floor((Math.random()*13000)+4000);
+
+var randomTime = Math.floor((Math.random()*12000)+4000);
 window.onload = function() {
   ghost_chat("Ooooo very spooky.");
 };
@@ -24,7 +25,10 @@ function ghost_chat(msg){
   if (ghost_can_talk === true){
     var randomer = Math.floor(Math.random()*ghostscript.length);
       document.getElementById("ghost_talk").innerHTML =  ghostscript[randomer];
-      $( "#ghost_talk" ).show("slow").delay( 3000 ).fadeOut(2000);
+    if (msg !== undefined){
+      document.getElementById("ghost_talk").innerHTML = msg;
+    }
+      $( "#ghost_talk" ).show("slow").delay( 5000 ).fadeOut(2000);
   }
 }
 
@@ -70,15 +74,19 @@ $( ".fade_high" ).click(function() {
 });
 
 $( ".slide_down" ).click(function() {
-  $( "#ghost_dude" ).slideDown( "slow" );
+  $( "#ghost_dude" ).slideDown( 3000, "easeInOutBounce");
+    // adds an argument that changes the easing to easeInOutBounce
+    // (requires jquery-ui)
 });
 
 $( ".slide_up" ).click(function() {
-  $( "#ghost_dude" ).slideUp( "slow" );
+  $( "#ghost_dude" ).slideUp( "slow", ghost_chat("I SAY SOMETHING!") );
+  // adds a callback function as an argument
 });
 
 $( ".slide_toggle" ).click(function() {
-  $( "#ghost_dude" ).slideToggle( "slow" );
+  $( "#ghost_dude" ).slideToggle( 2000, "easeInOutElastic", ghost_chat("I PUT AN EASE AND A CALLBACK"));
+  // adds an easing style and callback function
 });
 
 $( "li button:nth-child(3)" ).click(function() {

@@ -123,7 +123,9 @@
 			<button class="slide_down">Slide down</button><button>Toggle Code</button>
 <pre><code>
 	$( ".slide_down" ).click(function() {
-	  $( "#ghost_dude" ).slideDown( "slow" );
+	  $( "#ghost_dude" ).slideDown( "slow", "easeInOutBounce" );
+      // adds an argument that changes the easing to easeInOutBounce
+      // (requires jquery-ui)
 	});
 </code></pre></li>
 <!-- .slideUp -->
@@ -132,7 +134,8 @@
 			<button class="slide_up">Slide up</button><button>Toggle Code</button>
 <pre><code>
 	$( ".slide_up" ).click(function() {
-	  $( "#ghost_dude" ).slideUp( "slow" );
+	  $( "#ghost_dude" ).slideUp( "slow", ghost_chat("I SAY SOMETHING!") );
+    // adds a callback function as an argument
 	});
 </code></pre></li>
 <!-- .slideToggle -->
@@ -140,8 +143,11 @@
 		<span class="effect_list">.slideToggle() - Toggles the element with a slide effect.</span>
 			<button class="slide_toggle">Slide toggle</button><button>Toggle Code</button>
 <pre><code>
-	$( ".slide_toggle" ).click(function() {
-	  $( "#ghost_dude" ).slideToggle( "slow" );
+  $( ".slide_toggle" ).click(function() {
+    $( "#ghost_dude" ).slideToggle( 
+      2000, "easeInOutElastic", ghost_chat("I PUT AN EASE AND A CALLBACK"
+    ));
+    // adds an easing style and callback function
 	});
 </code></pre>
 </ul>
@@ -165,7 +171,8 @@
 </div> <!-- main content -->
 <script>hljs.initHighlightingOnLoad();</script>
 <script src="public/bower_components/jquery/dist/jquery.min.js"></script>
-<script src="public/js/ghost.js"></script>
-<script src="public/js/ghostscript.js"></script>
+<script src="public/bower_components/jquery-ui/jquery-ui.min.js"></script>
+<script src="js/ghost.js"></script>
+<script src="js/ghostscript.js"></script>
 </body>
 </html>
